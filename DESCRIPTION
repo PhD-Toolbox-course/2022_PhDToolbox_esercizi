@@ -18,11 +18,9 @@ Suggests:
 Imports: 
     palmerpenguins (>= 0.1.0),
     dplyr (>= 1.0.5),
-    gradethis (>= 0.2.3.9001),
     tidyr,
     ggplot2,
     forcats
 Remotes: 
     tidyverse/dplyr,
-    allisonhorst/palmerpenguins,
-    rstudio/gradethis
+    allisonhorst/palmerpenguins
