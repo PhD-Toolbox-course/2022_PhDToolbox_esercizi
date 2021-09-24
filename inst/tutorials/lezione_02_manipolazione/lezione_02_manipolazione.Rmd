@@ -1,0 +1,42 @@
+---
+title: "Lezione 2: Manipolazione dei dati"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+    
+    ```{r setup, include=FALSE}
+library(learnr)
+library(palmerpenguins)
+```
+
+## Select
+
+
+```{r df1-setup, echo=FALSE}
+penguins <- palmerpenguins::penguins
+
+```
+
+```{r df1, exercise=TRUE}
+# Usantdo la tibble chiamata penguins seleziona le colonne 1, 5, 8
+# Usa la funziona select e il pipe opetator %>%
+
+penguins %>% 
+    select(___, ___, ___)
+```
+
+```{r df1-hint-1}
+# Sostituisci i numeri hai trattini
+```
+
+```{r df1-hint-2}
+# In alternativa puoi usare le funzioni nrow() e ncol()
+```
+
+```{r df1-hint-3}
+# La soluzione è
+dim(penguins)
+ncol(penguins)
+nrow(penguins)
+```
+
