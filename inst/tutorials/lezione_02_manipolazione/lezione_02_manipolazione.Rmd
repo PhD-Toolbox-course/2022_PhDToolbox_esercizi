@@ -200,18 +200,3 @@ penguins %>%
 penguins
 ```
 
-```{r df9-hint-1}
-# Utilizare la funzione filter sulle colonne island e flipper_length_mm
-```
-
-```{r df9-hint-2}
-# L'operatore boolean OR viene indicato nel codice da una barra verticale ( | )
-# Esso deve essere usato quando volete estrarre valori più piccoli di x OR più grandi di x
-```
-
-```{r df9-hint-3}
-# La soluzione è
-penguins %>% 
-    filter(sex == "male") %>%
-    filter(body_mass_g == min(body_mass_g))
-```
