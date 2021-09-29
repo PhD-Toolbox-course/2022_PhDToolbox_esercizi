@@ -313,29 +313,29 @@ penguins %>%
               mediana = median(bill_length_mm))
 ```
 
-```{r df11, exercise=TRUE, exercise.setup = "df1-setup" }
+```{r df11b, exercise=TRUE, exercise.setup = "df1-setup" }
 # Usando la tibble chiamata penguins calcola la media e la mediana della lunghezza dei becchi 
 # Delle tre specie di pinguini ogni anno di campionamento
 
 ```
 
-```{r df11-hint-1}
+```{r df11b-hint-1}
 # L'esercizio è del tutto simile al precedente, ma invece di raggruppare solamente per
 # species ora bisogna raggruppare anche per year
 ```
 
-```{r df11-hint-2}
+```{r df11b-hint-2}
 # La media si calcola usando la funzione mean()
 # La mediana si calcola usando la funzione median()
 ```
 
-```{r df11-hint-3}
+```{r df11b-hint-3}
 # Ricordatevi che se sono presenti degli NA nella colonna, il risultato delle funzioni
 # mean e median sarà NA. Per ovviare a questo problema dovete rimuovere gli NA o dire alle
 # funzioni di ignorarli usando na.rm = TRUE
 ```
 
-```{r df11-hint-4}
+```{r df11b-hint-4}
 # La soluzione 1 è
 penguins %>% 
     group_by(species, year) %>%
@@ -407,20 +407,20 @@ penguins %>%
     filter(bill_length_mm == min(bill_length_mm))
 ```
 
-```{r df13, exercise=TRUE, exercise.setup = "df1-setup" }
+```{r df14, exercise=TRUE, exercise.setup = "df1-setup" }
 # Usando la tibble chiamata penguins estrai per ogni specie il pinguino maschio e il pinguino femmina con
 # il becco più lungo
 
-```{r df13-hint-1}
+```{r df14-hint-1}
 # L'esercizio è simile al precedente, ma bisogna raggruppare anche per species
 
 ```
 
-```{r df13-hint-2}
+```{r df14-hint-2}
 # Utilizzare la funzione filter dopo aver raggruppato per sex e species
 ```
 
-```{r df13-hint-3}
+```{r df14-hint-3}
 # La soluzione è
 penguins %>% 
     group_by(sex, species) %>%
