@@ -107,4 +107,111 @@ penguins %>%
     select(-ends_with("mm"))
 ```
 
+## Filter
 
+```{r df5, exercise=TRUE, exercise.setup = "df1-setup" }
+# Usando la tibble chiamata penguins estrai tutte le osservazioni che contengono la specie Adelie
+# Usa la funziona filter e il pipe opetator %>%
+
+penguins
+```
+
+```{r df5-hint-1}
+# Utilizare la funzione filter sulla colonna species
+```
+
+```{r df5-hint-2}
+# La colonna species contenere Adelie. Per tradurlo in linguaggio R, puoi scrivere 
+# species == "Adelie"
+
+```
+
+```{r df5-hint-3}
+# La soluzione è
+penguins %>% 
+    filter(species == "Adelie")
+```
+
+```{r df6, exercise=TRUE, exercise.setup = "df1-setup" }
+# Usando la tibble chiamata penguins estrai tutte le osservazioni che contengono la specie Adelie e
+# e l'isola Torgersen
+# Usa la funziona filter e il pipe opetator %>%
+
+penguins
+```
+
+```{r df6-hint-1}
+# Utilizare la funzione filter sulle colonne species e island
+```
+
+```{r df6-hint-2}
+# La soluzione è
+penguins %>% 
+    filter(species == "Adelie",
+           island == "Torgersen")
+```
+
+```{r df7, exercise=TRUE, exercise.setup = "df1-setup" }
+# Usando la tibble chiamata penguins estrai tutti i pinguini dell'isola di Biscoe che hanno la lunghezza del becco
+# compresa tra 34 e 36 inclusi
+
+penguins
+```
+
+```{r df7-hint-1}
+# Utilizare la funzione filter sulle colonne island e bill_length_mm
+```
+
+```{r df7-hint-2}
+# La soluzione è
+penguins %>% 
+    filter(island == "Biscoe",
+           bill_length_mm >= 34,
+           bill_length_mm <= 36)
+```
+
+```{r df8, exercise=TRUE, exercise.setup = "df1-setup" }
+# Usando la tibble chiamata penguins estrai tutti i pinguini dell'isola di Dream che hanno la lunghezza delle pinne
+# minore di 179 e maggiore di 209
+
+penguins
+```
+
+```{r df8-hint-1}
+# Utilizare la funzione filter sulle colonne island e flipper_length_mm
+```
+
+```{r df8-hint-2}
+# L'operatore boolean OR viene indicato nel codice da una barra verticale ( | )
+# Esso deve essere usato quando volete estrarre valori più piccoli di x OR più grandi di x
+```
+
+```{r df8-hint-3}
+# La soluzione è
+penguins %>% 
+    filter(island == "Dream",
+           flipper_length_mm < 179 | flipper_length_mm > 209)
+```
+
+```{r df9, exercise=TRUE, exercise.setup = "df1-setup" }
+# Usando la tibble chiamata penguins estrai  il pinguino maschio e il pinguino femmina con il 
+# minore body/mass index
+
+penguins
+```
+
+```{r df9-hint-1}
+# Utilizare la funzione filter sulle colonne island e flipper_length_mm
+```
+
+```{r df9-hint-2}
+# L'operatore boolean OR viene indicato nel codice da una barra verticale ( | )
+# Esso deve essere usato quando volete estrarre valori più piccoli di x OR più grandi di x
+```
+
+```{r df9-hint-3}
+# La soluzione è
+penguins %>% 
+    filter(sex == "male") %>%
+    filter(body_mass_g == min(body_mass_g))
+```
