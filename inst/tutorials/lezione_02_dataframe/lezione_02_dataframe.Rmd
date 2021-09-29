@@ -140,7 +140,7 @@ library(tidyverse)
 dir.create("data",  showWarnings = FALSE)
 download.file(url = "https://ndownloader.figshare.com/files/2292169",
               destfile = "data/portal_data_joined.csv")
-surveys <- read_csv("data/portal_data_joined.csv")
+surveys <- read_csv("data/portal_data_joined.csv", show_col_types = FALSE)
 ```
 
 ```{r df5, exercise=TRUE, exercise.setup = "df5-setup"}
