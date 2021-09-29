@@ -339,7 +339,9 @@ surveys$year</code></pre>
 </div>
 <div class="tutorial-exercise-support" data-label="df10-hint-4" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code># La soluzione è:
-(surveys_2001 &lt;- surveys[surveys$year == 2001, ])</code></pre>
+(surveys_2001 &lt;- surveys[surveys$year == 2001, ])
+# Per controllarne la correttezza:
+table(surveys_2001$year)</code></pre>
 </div>
 <div class="tutorial-exercise" data-label="df11" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code># Partendo da surveys, crea un dataframe che contenga 
@@ -372,7 +374,9 @@ surveys$year</code></pre>
 </div>
 <div class="tutorial-exercise-support" data-label="df11-hint-5" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code># La soluzione è:
-(surveys_80 &lt;- surveys[surveys$year &gt;= 1980 &amp; surveys$year &lt;= 1982, ])</code></pre>
+(surveys_80 &lt;- surveys[surveys$year &gt;= 1980 &amp; surveys$year &lt;= 1982, ])
+# Per controllarne la correttezza:
+table(surveys_80$year)</code></pre>
 </div>
 <div class="tutorial-exercise" data-label="df12" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code># Partendo da surveys, crea un dataframe che contenga 
@@ -406,7 +410,9 @@ surveys$year</code></pre>
 </div>
 <div class="tutorial-exercise-support" data-label="df12-hint-5" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code># La soluzione è:
-(surveys_ext &lt;- surveys[surveys$year &lt;= 1980 | surveys$year &gt;= 2001, ])</code></pre>
+(surveys_ext &lt;- surveys[surveys$year &lt;= 1980 | surveys$year &gt;= 2001, ])
+# Per controllarne la correttezza:
+table(surveys_ext$year)</code></pre>
 </div>
 
 <script type="application/shiny-prerendered" data-context="server-start">
@@ -553,16 +559,16 @@ learnr:::store_exercise_cache(structure(list(global_setup = structure(c("library
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz2-1", question = structure("La colonna bill_length_mm è", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_d8e4f84", 
+"character")), answers = list(structure(list(id = "lnr_ans_f807660", 
     option = "Carattere", value = "Carattere", label = structure("Carattere", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_8e27ad", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_fa5564b", 
     option = "Logico", value = "Logico", label = structure("Logico", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_d39ca84", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_2428db5", 
     option = "Numerico", value = "Numerico", label = structure("Numerico", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_f52856f", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_e9f789e", 
     option = "Numerosa", value = "Numerosa", label = structure("Numerosa", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
@@ -573,22 +579,22 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz2-1-answer", question = "quiz2-1"), loading = structure("<strong>Loading:<\u002fstrong> \nLa colonna bill_length_mm è\n<br/><br/><br/>", html = TRUE, class = c("html", 
 "character")), random_answer_order = TRUE, allow_retry = TRUE, 
-    seed = 592976616.723874, options = list()), class = c("learnr_radio", 
+    seed = 587609606.726373, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz2-2", question = structure("La colonna year è", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_2f92712", 
+"character")), answers = list(structure(list(id = "lnr_ans_a4ad905", 
     option = "Intera", value = "Intera", label = structure("Intera", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_5a23947", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_7642955", 
     option = "Integra", value = "Integra", label = structure("Integra", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_bcca420", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_2c42fee", 
     option = "Interinale", value = "Interinale", label = structure("Interinale", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_70f2649", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_b671217", 
     option = "Datata", value = "Datata", label = structure("Datata", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
@@ -599,7 +605,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz2-2-answer", question = "quiz2-2"), loading = structure("<strong>Loading:<\u002fstrong> \nLa colonna year è\n<br/><br/><br/>", html = TRUE, class = c("html", 
 "character")), random_answer_order = TRUE, allow_retry = TRUE, 
-    seed = 629814896.70672, options = list()), class = c("learnr_radio", 
+    seed = 352306987.335944, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
  
@@ -645,21 +651,21 @@ learnr:::store_exercise_cache(structure(list(global_setup = structure(c("library
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz-1", question = structure("Cosa contiene l&#39;output della funzione summary?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_6831353", 
+"character")), answers = list(structure(list(id = "lnr_ans_26492eb", 
     option = "La classe delle colonne", value = "La classe delle colonne", 
     label = structure("La classe delle colonne", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_61301b8", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_35f760a", 
     option = "I nomi delle colonne e statistica inferenziale", 
     value = "I nomi delle colonne e statistica inferenziale", 
     label = structure("I nomi delle colonne e statistica inferenziale", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_2031b37", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_df59d1", 
     option = "I nomi delle colonne e statistica descrittiva", 
     value = "I nomi delle colonne e statistica descrittiva", 
     label = structure("I nomi delle colonne e statistica descrittiva", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_59686d3", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_2e7f7e2", 
     option = "I nomi delle colonne e statistica bayesiana", value = "I nomi delle colonne e statistica bayesiana", 
     label = structure("I nomi delle colonne e statistica bayesiana", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", 
@@ -671,22 +677,22 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz-1-answer", question = "quiz-1"), loading = structure("<strong>Loading:<\u002fstrong> \nCosa contiene l&#39;output della funzione summary?\n<br/><br/><br/>", html = TRUE, class = c("html", 
 "character")), random_answer_order = TRUE, allow_retry = TRUE, 
-    seed = 45121354.9789887, options = list()), class = c("learnr_radio", 
+    seed = 838547888.609521, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz-2", question = structure("Osservando la variabile species sapresti dire quante specie di pinguini sono presenti nel dataset", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_f73a41e", 
+"character")), answers = list(structure(list(id = "lnr_ans_6538001", 
     option = "3", value = "3", label = structure("3", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_4537da4", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_259f60", 
     option = "152", value = "152", label = structure("152", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_9bbb1da", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_61f8186", 
     option = "344", value = "344", label = structure("344", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_ae6fa76", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_731b742", 
     option = "124", value = "124", label = structure("124", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
@@ -697,22 +703,22 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz-2-answer", question = "quiz-2"), loading = structure("<strong>Loading:<\u002fstrong> \nOsservando la variabile species sapresti dire quante specie di pinguini sono presenti nel dataset\n<br/><br/><br/>", html = TRUE, class = c("html", 
 "character")), random_answer_order = TRUE, allow_retry = TRUE, 
-    seed = 277428980.370812, options = list()), class = c("learnr_radio", 
+    seed = 936813678.063762, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz-3", question = structure("Qual è la lunghezza media della lunghezza del becco dei pinguini presenti nel dataframe?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_496003c", 
+"character")), answers = list(structure(list(id = "lnr_ans_aaf3efa", 
     option = "43.92", value = "43.92", label = structure("43.92", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_42bd049", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_bd84d1a", 
     option = "32.10", value = "32.10", label = structure("32.10", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_e50729e", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_bc159fb", 
     option = "48.50", value = "48.50", label = structure("48.50", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_55a3909", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_40d199", 
     option = "44.454", value = "44.454", label = structure("44.454", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
@@ -723,7 +729,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz-3-answer", question = "quiz-3"), loading = structure("<strong>Loading:<\u002fstrong> \nQual è la lunghezza media della lunghezza del becco dei pinguini presenti nel dataframe?\n<br/><br/><br/>", html = TRUE, class = c("html", 
 "character")), random_answer_order = TRUE, allow_retry = TRUE, 
-    seed = 977082491.045011, options = list()), class = c("learnr_radio", 
+    seed = 568544955.235251, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
  
@@ -1059,7 +1065,7 @@ learnr:::store_exercise_cache(structure(list(global_setup = structure(c("library
 <!--/html_preserve-->
 <!--html_preserve-->
 <script type="application/shiny-prerendered" data-context="execution_dependencies">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46]}},"value":[{"type":"character","attributes":{},"value":["backports","base","bslib","checkmate","cli","compiler","curl","datasets","digest","ellipsis","evaluate","fastmap","graphics","grDevices","htmltools","htmlwidgets","httpuv","jquerylib","jsonlite","knitr","later","learnr","lifecycle","magrittr","markdown","methods","mime","palmerpenguins","promises","R6","Rcpp","rlang","rmarkdown","rprojroot","rstudioapi","sass","shiny","stats","stringi","stringr","tools","utils","withr","xfun","xtable","yaml"]},{"type":"character","attributes":{},"value":["1.2.1","4.0.1","0.2.5.1","2.0.0","3.0.1","4.0.1","4.3.2","4.0.1","0.6.27","0.3.2","0.14","1.1.0","4.0.1","4.0.1","0.5.2.9000","1.5.3","1.6.2","0.1.4","1.7.2","1.33","1.3.0","0.10.1.9015","1.0.0","2.0.1","1.1","4.0.1","0.11","0.1.0","1.2.0.1","2.5.1","1.0.7","0.4.11.9001","2.10","2.0.2","0.13","0.4.0","1.6.0","4.0.1","1.7.4","1.4.0","4.0.1","4.0.1","2.4.2","0.25","1.8-4","2.2.1"]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46]}},"value":[{"type":"character","attributes":{},"value":["backports","base","bslib","checkmate","cli","compiler","curl","datasets","digest","ellipsis","evaluate","fastmap","graphics","grDevices","htmltools","htmlwidgets","httpuv","jquerylib","jsonlite","knitr","later","learnr","lifecycle","magrittr","markdown","methods","mime","palmerpenguins","promises","R6","Rcpp","rlang","rmarkdown","rprojroot","rstudioapi","sass","shiny","stats","stringi","stringr","tools","utils","withr","xfun","xtable","yaml"]},{"type":"character","attributes":{},"value":["1.2.1","4.0.1","0.2.5.1","2.0.0","3.0.1","4.0.1","4.3.2","4.0.1","0.6.28","0.3.2","0.14","1.1.0","4.0.1","4.0.1","0.5.2.9000","1.5.3","1.6.2","0.1.4","1.7.2","1.33","1.3.0","0.10.1.9015","1.0.0","2.0.1","1.1","4.0.1","0.11","0.1.0","1.2.0.1","2.5.1","1.0.7","0.4.11.9001","2.10","2.0.2","0.13","0.4.0","1.6.0","4.0.1","1.7.4","1.4.0","4.0.1","4.0.1","2.4.2","0.25","1.8-4","2.2.1"]}]}]}
 </script>
 <!--/html_preserve-->
 </div>
