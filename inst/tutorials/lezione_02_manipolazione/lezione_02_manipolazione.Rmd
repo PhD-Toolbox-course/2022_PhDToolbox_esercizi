@@ -30,12 +30,80 @@ penguins %>%
 ```
 
 ```{r df1-hint-2}
-
-```
-
-```{r df1-hint-3}
 # La soluzione è
 penguins %>% 
     select(1, 5, 8)
 ```
+
+
+```{r df2, exercise=TRUE, exercise.setup = "df1-setup" }
+# Usando la tibble chiamata penguins seleziona le colonne species, sex and year
+# Usa la funziona select e il pipe opetator %>%
+
+penguins %>% 
+    select(___, ___, ___)
+```
+
+```{r df2-hint-1}
+# Sostituisci i nomi delle colonne ai trattini
+```
+
+```{r df2-hint-2}
+# La soluzione è
+penguins %>% 
+    select(species, sex, year)
+```
+
+```{r df3, exercise=TRUE, exercise.setup = "df1-setup" }
+# Usando la tibble chiamata penguins seleziona tutte le colonne il cui nome inizia con la lettera "b".    
+# Usa la funziona select e il pipe opetator %>%
+
+penguins
+```
+
+```{r df3-hint-1}
+# Utilizare la funzione help chiamata starts_with()
+```
+
+```{r df3-hint-2}
+# Ricordarsi di quotare (mettere tra vircolette) la parola di interesse nella funzione starts_with()
+
+# Es: select(starts_with("bill"))
+```
+
+```{r df3-hint-3}
+# La soluzione è
+penguins %>% 
+    select(starts_with("b"))
+```
+
+```{r df4, exercise=TRUE, exercise.setup = "df1-setup" }
+# Usando la tibble chiamata penguins elimina tutte le colonne il cui nome finisce con la "mm".    
+# Usa la funziona select e il pipe opetator %>%
+
+penguins
+```
+
+```{r df4-hint-1}
+# Utilizare la funzione help chiamata ends_with()
+```
+
+```{r df4-hint-2}
+# Ricordarsi di quotare (mettere tra vircolette) la parola di interesse nella funzione ends_with()
+
+# Es: select(ends_with("bill"))
+```
+
+```{r df4-hint-3}
+# Ricordarsi di aggiungere un meno (-) davanti alla funzione ends_with per eliminare le colonne
+
+# Es: select(-ends_with("bill"))
+```
+
+```{r df4-hint-4}
+# La soluzione è
+penguins %>% 
+    select(-ends_with("mm"))
+```
+
 
