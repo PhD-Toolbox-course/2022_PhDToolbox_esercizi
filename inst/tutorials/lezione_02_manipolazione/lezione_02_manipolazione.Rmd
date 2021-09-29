@@ -193,10 +193,83 @@ penguins %>%
            flipper_length_mm < 179 | flipper_length_mm > 209)
 ```
 
-```{r df9, exercise=TRUE, exercise.setup = "df1-setup" }
-# Usando la tibble chiamata penguins estrai  il pinguino maschio e il pinguino femmina con il 
-# minore body/mass index
+```{r df8b, exercise=TRUE, exercise.setup = "df1-setup" }
+# Usando la tibble chiamata penguins elimina tutti gli NA nella colonna bill_length_mm
 
 penguins
+```
+
+```{r df8b-hint-1}
+# Utilizare la funzione filter sulla colonna bill_length_mm
+```
+
+```{r df8b-hint-2}
+# La funzione da usare è is.na()
+# Ricordati di usare la negazione della funzione. Si ottiene anteponendo alla funzione un punto escalmativo (!)
+```
+
+```{r df8b-hint-3}
+# La soluzione è
+penguins %>% 
+    filter(!is.na(bill_length_mm))
+```
+
+
+## Mutate
+
+```{r df9, exercise=TRUE, exercise.setup = "df1-setup" }
+# Usando la tibble chiamata penguins crea una nuova colonna che contenga la
+# lunghezza del becco in centimetri
+
+penguins
+```
+
+```{r df9-hint-1}
+# Utilizare la funzione mutate sulla colonna bill_length_mm
+```
+
+```{r df9-hint-2}
+# La funzione mutate vuole come primo argomento il nome della nuova colonna.
+# Successivamente vuole il valore della nuova colonna.
+# Il nome della colonna  e  il suo valore sono separati da un uguale (=)
+```
+
+```{r df9-hint-3}
+# La soluzione è
+penguins %>% 
+    mutate(bill_length_cm = bill_length_mm / 10)
+```
+
+### Questo esercizio ha un livello di difficoltà elevato
+
+```{r df10, exercise=TRUE, exercise.setup = "df1-setup" }
+# Usando la tibble chiamata penguins aggiorna la colonna island.
+# Immagina che il nome dell'isola Torgersen sia scritto sbagliato. 
+# Vogliamo quindi correggerlo con il nome giusto. Per farlo dobbiamo usare 
+# una funzione nuova che si chiama "ifelse".
+
+# La funzione "ifelse" funziona in questo modo: se una condizione è vera, la funzione fa
+# l'operazione A, mentre se è falsa esegue l'operazione B.
+
+# Nel nostro caso dovremo scrive un comando che dica:
+# - se il nome dell'isola è Torgersen allora cambialo in Elba;
+# - se il nome non è Torgersen allora lascia il nome corrente
+
+penguins %>%
+    mutate(island = ifelse(___ == ___, "___", island))
+```
+
+```{r df10-hint-1}
+# Utilizare la funzione mutate sulla colonna island
+```
+
+```{r df10-hint-2}
+# se island == "Torgersen" allora sostituiscilo con "Elba", se no non cambiare il valore nella colonna
+```
+
+```{r df10-hint-3}
+# La soluzione è
+penguins %>% 
+    mutate(island = ifelse(island == "Torgersen", "Elba", island))
 ```
 
