@@ -139,7 +139,7 @@ quiz(
 library(tidyverse)
 dir.create("data",  showWarnings = FALSE)
 download.file(url = "https://ndownloader.figshare.com/files/2292169",
-              destfile = "data/portal_data_joined.csv")
+              destfile = "data/portal_data_joined.csv", quiet = TRUE)
 surveys <- read_csv("data/portal_data_joined.csv", show_col_types = FALSE)
 ```
 
