@@ -1,0 +1,56 @@
+---
+title: "Lezione 4: Grafici"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+    
+    ```{r setup, include=FALSE}
+library(learnr)
+library(palmerpenguins)
+library(tidyverse)
+```
+
+## Grafici a dispersione
+
+
+```{r df1-setup, echo=FALSE}
+penguins <- palmerpenguins::penguins
+
+```
+
+```{r df1, exercise=TRUE}
+# Usando la tibble chiamata penguins crea un grafico a dispersione (punti) che contenga:
+# - sull'asse delle x bill_length_mm
+# - sull'asse delle y bill_depth_mm
+penguins %>% 
+    ggplot(aes(x = ___, 
+               y = ___)) +
+    geom_point()
+```
+
+```{r df1-hint-1}
+# Sostituisci le variabili ai trattini
+```
+
+```{r df1-hint-2}
+# usa geom_point() per stampare i dati sul grafico
+```
+
+```{r df1-hint-2}
+# La soluzione è
+penguins %>% 
+    ggplot(aes(x = bill_length_mm, 
+               y = bill_depth_mm)) +
+    geom_point()
+```
+
+
+```{r df2, exercise=TRUE, exercise.setup = "df1-setup" }
+```
+
+```{r df2-hint-1}
+```
+
+```{r df2-hint-2}
+# La soluzione è
+```
