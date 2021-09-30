@@ -436,6 +436,8 @@ penguins %>%
 # Successivamente crea una tabella che contenga il nome delle specie come intestazione delle colonne
 # e gli anni come nome delle righe
 
+# Riporto qui l'output atteso:
+
 # year | Adelie | Chinstrap | Gentoo
 # 2007 |     50 |        26 |     34
 # 2008 |     50 |        18 |     46
