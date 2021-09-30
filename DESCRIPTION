@@ -1,6 +1,6 @@
 Package: intRo.Esercizi
-Title: Pacchetto sviluppato per il formative assessment degli studenti
-Version: 0.0.0.9000
+Title: Pacchetto sviluppato per il formative assessment degli studenti del corso intRo organizzato dall'IBiG (IPSP Bioinformatic group)
+Version: 1.0.0
 Authors@R: 
     person(given = "Marco",
            family = "Chiapello",
