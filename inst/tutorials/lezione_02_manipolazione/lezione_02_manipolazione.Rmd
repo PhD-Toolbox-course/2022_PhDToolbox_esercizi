@@ -426,3 +426,74 @@ penguins %>%
     group_by(sex, species) %>%
     filter(bill_length_mm == min(bill_length_mm))
 ```
+
+## Pivoting
+
+**Questi esercizi presentano una difficoltà molto elevata**
+
+```{r piv1, exercise=TRUE, exercise.setup = "df1-setup" }
+# Usando la tibble chiamata penguins conta quante species sono state campionato ogni anno.
+# Successivamente crea una tabella che contenga il nome delle specie come intestazione delle colonne
+# e gli anni come nome delle righe
+
+# year | Adelie | Chinstrap | Gentoo
+# 2007 |     50 |        26 |     34
+# 2008 |     50 |        18 |     46
+# 2009 |     52 |        24 |     44
+```
+
+```{r piv1-hint-1}
+# Per contare usa la funzione count()
+
+```
+
+```{r piv1-hint-2}
+# Per cambiare il formato della tabella usa la funzione pivot_wider
+```
+
+```{r piv1-hint-3}
+# La soluzione è
+penguins %>% 
+    count(species, year) %>%
+    pivot_wider(names_from = species,
+                values_from = n)
+```
+
+```{r piv2, exercise=TRUE, exercise.setup = "df1-setup" }
+# Corri il seguente codice per generare la tabella "wide"
+
+wide <- penguins %>%
+    drop_na() %>% 
+    group_by(island, year) %>%
+    summarise(across(ends_with("mm"), mean, .names = "mean_{.col}"))
+
+# Crea una tabella "lunga" che contenga nella colonna "MEAN" il nome della media calcolata (tutte le colonne che iniziano con mean_);
+# nella colonna "VALUE" il valore della media
+
+```
+
+```{r piv2-hint-1}
+# Per cambiare il formato della tabella usa la funzione pivot_longer
+```
+
+```{r piv2-hint-2}
+# La funzione pivot_longer ha 3 argomenti fondamentali:
+# 1. Le colonne che si vogliono modificare (cols = ...)
+# 2. Il nome della colonna che contiene i nomi (names_to = ...)
+# 3. Il nome della colonna che contiene i valiru (values_to = ...)
+```
+
+```{r piv2-hint-3}
+# La soluzione 1 è
+wide %>%
+    pivot_longer(cols = starts_with("mean"),
+                 names_to = "MEAN",
+                 values_to = "VALUE")
+# La soluzione 2 è
+wide %>%
+    pivot_longer(cols = mean_bill_length_mm:mean_flipper_length_mm,
+                 names_to = "MEAN",
+                 values_to = "VALUE")
+
+```
+
