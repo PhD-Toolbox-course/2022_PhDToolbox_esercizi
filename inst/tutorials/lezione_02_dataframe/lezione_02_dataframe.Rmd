@@ -36,9 +36,9 @@ penguins <- as.data.frame(palmerpenguins::penguins)
 
 ```{r df1-hint-3}
 # La soluzione è
-dim(penguins)
-ncol(penguins)
-nrow(penguins)
+# dim(penguins)
+# ncol(penguins)
+# nrow(penguins)
 ```
 
 ## Nomi delle colonne
@@ -55,7 +55,7 @@ nrow(penguins)
 
 ```{r df2-hint-2}
 # La soluzione è 
-names(penguins)
+# names(penguins)
 
 ```
 
@@ -66,7 +66,7 @@ names(penguins)
 ```
 
 ```{r df3-solution}
-str(penguins)
+# str(penguins)
 ```
 
 ```{r quiz2, echo = FALSE}
@@ -98,7 +98,7 @@ quiz(
 ```
 
 ```{r df4-solution}
-summary(penguins)
+# summary(penguins)
 ```
 
 
@@ -155,7 +155,7 @@ surveys <- read_csv("data/portal_data_joined.csv", show_col_types = FALSE)
 
 ```{r df5-hint-2}
 # La soluzione è:
-(surveys <- read_csv("data/portal_data_joined.csv"))
+# (surveys <- read_csv("data/portal_data_joined.csv"))
 ```
 
 ### Create nuovi dataframes
@@ -163,7 +163,8 @@ surveys <- read_csv("data/portal_data_joined.csv", show_col_types = FALSE)
 ```{r df6, exercise=TRUE, exercise.setup = "df5-setup"}
 # Crea un dataframe che contenga solo la riga 200 di surveys.
 # Salva in una variabile chiamata surveys_200
-surveys_200 <- surveys[___ , ___]
+
+# surveys_200 <- surveys[___ , ___]
 
 ```
 
@@ -181,7 +182,7 @@ surveys_200 <- surveys[___ , ___]
 
 ```{r df6-hint-3}
 # La soluzione è:
-(surveys_200 <- surveys[200, ])
+# (surveys_200 <- surveys[200, ])
 
 ```
 
@@ -189,7 +190,8 @@ surveys_200 <- surveys[___ , ___]
 # Partendo da surveys, crea un dataframe che contenga 
 # dalla riga 200 alla riga 224 e le prime 5 colonne
 # Salva in una variabile chiamata surveys_sub
-surveys_sub <- surveys[___ , ___]
+
+# surveys_sub <- surveys[___ , ___]
 
 ```
 
@@ -208,7 +210,7 @@ surveys_sub <- surveys[___ , ___]
 
 ```{r df7-hint-3}
 # La soluzione è:
-(surveys_sub <- surveys[200:224, 1:5])
+# (surveys_sub <- surveys[200:224, 1:5])
 
 ```
 
@@ -216,7 +218,8 @@ surveys_sub <- surveys[___ , ___]
 # Partendo da surveys, crea un dataframe che contenga 
 # solo la riga centrale
 # Salva in una variabile chiamata surveys_middle
-___ <- surveys[___ , ___]
+
+# ___ <- surveys[___ , ___]
 
 ```
 
@@ -239,7 +242,7 @@ ___ <- surveys[___ , ___]
 
 ```{r df8-hint-4}
 # La soluzione è:
-(surveys_middle <- surveys[nrow(surveys) / 2, ])
+# (surveys_middle <- surveys[nrow(surveys) / 2, ])
 
 ```
 
@@ -247,7 +250,8 @@ ___ <- surveys[___ , ___]
 # Partendo da surveys, crea un dataframe che contenga 
 # solo le ultime 7 righe del data.frame
 # Salva in una variabile chiamata surveys_last
-___ <- surveys[___ , ___]
+
+# ___ <- surveys[___ , ___]
 
 ```
 
@@ -270,7 +274,7 @@ ___ <- surveys[___ , ___]
 
 ```{r df9-hint-4}
 # La soluzione è:
-(surveys_last <- surveys[(nrow(surveys) - 7): nrow(surveys), ])
+# (surveys_last <- surveys[(nrow(surveys) - 7): nrow(surveys), ])
 
 ```
 
@@ -280,7 +284,8 @@ ___ <- surveys[___ , ___]
 # Partendo da surveys, crea un dataframe che contenga 
 # solo le righe del data.frame che contengono l'anno 2001.
 # Salva in una variabile chiamata surveys_2001
-___ <- surveys[___ , ___]
+
+# ___ <- surveys[___ , ___]
 
 ```
 
@@ -300,15 +305,15 @@ ___ <- surveys[___ , ___]
 # Ricorda che per selezionare una colonna specifica bisogna usare il $
 
 # Quindi per selezionare la colonna di nostro interesse:
-surveys$year
+# surveys$year
 
 ```
 
 ```{r df10-hint-4}
 # La soluzione è:
-(surveys_2001 <- surveys[surveys$year == 2001, ])
+# (surveys_2001 <- surveys[surveys$year == 2001, ])
 # Per controllarne la correttezza:
-table(surveys_2001$year)
+# table(surveys_2001$year)
 ```
 
 
@@ -316,7 +321,8 @@ table(surveys_2001$year)
 # Partendo da surveys, crea un dataframe che contenga 
 # solo le righe del data.frame che contengono gli anni tra il 1980 e il 1982.
 # Salva in una variabile chiamata surveys_80
-___ <- surveys[___ , ___]
+
+# ___ <- surveys[___ , ___]
 
 ```
 
@@ -336,7 +342,7 @@ ___ <- surveys[___ , ___]
 # Ricorda che per selezionare una colonna specifica bisogna usare il $
 
 # Quindi per selezionare la colonna di nostro interesse:
-surveys$year
+# surveys$year
 
 ```
 
@@ -351,9 +357,9 @@ surveys$year
 
 ```{r df11-hint-5}
 # La soluzione è:
-(surveys_80 <- surveys[surveys$year >= 1980 & surveys$year <= 1982, ])
+# (surveys_80 <- surveys[surveys$year >= 1980 & surveys$year <= 1982, ])
 # Per controllarne la correttezza:
-table(surveys_80$year)
+# table(surveys_80$year)
 ```
 
 
@@ -362,7 +368,8 @@ table(surveys_80$year)
 # solo le righe del data.frame che contengono gli anni 
 # prima del 1980 e dopo il 2001.
 # Salva in una variabile chiamata surveys_ext
-___ <- surveys[___ , ___]
+
+# ___ <- surveys[___ , ___]
 
 ```
 
@@ -382,7 +389,7 @@ ___ <- surveys[___ , ___]
 # Ricorda che per selezionare una colonna specifica bisogna usare il $
 
 # Quindi per selezionare la colonna di nostro interesse:
-surveys$year
+# surveys$year
 
 ```
 
@@ -397,7 +404,7 @@ surveys$year
 
 ```{r df12-hint-5}
 # La soluzione è:
-(surveys_ext <- surveys[surveys$year <= 1980 | surveys$year >= 2001, ])
+# (surveys_ext <- surveys[surveys$year <= 1980 | surveys$year >= 2001, ])
 # Per controllarne la correttezza:
-table(surveys_ext$year)
+# table(surveys_ext$year)
 ```

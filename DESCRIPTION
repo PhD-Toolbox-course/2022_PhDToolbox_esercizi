@@ -1,13 +1,13 @@
-Package: intRo.Esercizi
-Title: Pacchetto sviluppato per il formative assessment degli studenti del corso intRo organizzato dall'IBiG (IPSP Bioinformatic group)
-Version: 1.0.0
+Package: Exercises2022
+Title: PhDToolbox formative assessment 
+Version: 0.0.1
 Authors@R: 
     person(given = "Marco",
            family = "Chiapello",
-           role = c("aut", "cre", "man"),
+           role = c("aut", "cre"),
            email = "marco.chiapello@gmail.com",
            comment = c(ORCID = "0000-0001-7768-3047"))
-Description: Il pacchetto <U+00E8> stato sviluppato per il corso introduttivo ad R dell'Istituto per la Protezione Sostenibile delle Piante del Consiglio Nazionle per le Ricerche 
+Description: The package has been developed for the formative assessment of the students of PhDToolbox, Data analysis with R module.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

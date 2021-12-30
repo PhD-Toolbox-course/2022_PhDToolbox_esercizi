@@ -4,7 +4,7 @@ output: learnr::tutorial
 runtime: shiny_prerendered
 ---
     
-    ```{r setup, include=FALSE}
+```{r setup, include=FALSE}
 library(learnr)
 
 ```
@@ -12,6 +12,11 @@ library(learnr)
 ## Creazione e assegnazione di variabili
 
 #### Nei seguenti eserizi ti verrà chiesto di create valori ed assegnarli a diverse variabili.
+
+```
+x <- 15
+```
+
 
 ```{r salva, exercise=TRUE}
 # Salva dentro la variabile x il valore 15 e stampalo a schermo

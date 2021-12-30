@@ -22,10 +22,11 @@ penguins <- palmerpenguins::penguins
 # Usando la tibble chiamata penguins crea un grafico a dispersione (punti) che contenga:
 # - sull'asse delle x bill_length_mm
 # - sull'asse delle y bill_depth_mm
-penguins %>% 
-    ggplot(aes(x = ___, 
-               y = ___)) +
-    geom_point()
+
+# penguins %>% 
+#     ggplot(aes(x = ___, 
+#                y = ___)) +
+#     geom_point()
 ```
 
 ```{r df1-hint-1}
@@ -38,10 +39,11 @@ penguins %>%
 
 ```{r df1-hint-3}
 # La soluzione è
-penguins %>% 
-    ggplot(aes(x = bill_length_mm, 
-               y = bill_depth_mm)) +
-    geom_point()
+
+# penguins %>% 
+#     ggplot(aes(x = bill_length_mm, 
+#                y = bill_depth_mm)) +
+#     geom_point()
 ```
 
 
@@ -61,10 +63,11 @@ penguins %>%
 
 ```{r df2-hint-3}
 # La soluzione è
-penguins %>% 
-    ggplot(aes(x = bill_length_mm, 
-               y = bill_depth_mm)) +
-    geom_point(color = "red", alpha = 0.5)
+
+# penguins %>% 
+#     ggplot(aes(x = bill_length_mm, 
+#                y = bill_depth_mm)) +
+#     geom_point(color = "red", alpha = 0.5)
 ```
 
 ```{r df3, exercise=TRUE, exercise.setup = "df1-setup" }
@@ -84,10 +87,11 @@ penguins %>%
 
 ```{r df3-hint-3}
 # La soluzione è
-penguins %>% 
-    ggplot(aes(x = bill_length_mm, 
-               y = bill_depth_mm)) +
-    geom_point(aes(color = species))
+
+# penguins %>% 
+#     ggplot(aes(x = bill_length_mm, 
+#                y = bill_depth_mm)) +
+#     geom_point(aes(color = species))
 ```
 
 ## Boxplot 
@@ -104,10 +108,11 @@ penguins %>%
 
 ```{r df4-hint-2}
 # La soluzione è
-penguins %>% 
-    ggplot(aes(x = species, 
-               y = bill_length_mm)) +
-    geom_boxplot()
+
+# penguins %>% 
+#     ggplot(aes(x = species, 
+#                y = bill_length_mm)) +
+#     geom_boxplot()
 
 ```
 
@@ -127,11 +132,12 @@ penguins %>%
 
 ```{r df5-hint-3}
 # La soluzione è
-penguins %>% 
-    ggplot(aes(x = species, 
-               y = bill_length_mm)) +
-    geom_boxplot() +
-    geom_jitter()
+
+# penguins %>% 
+#     ggplot(aes(x = species, 
+#                y = bill_length_mm)) +
+#     geom_boxplot() +
+#     geom_jitter()
 
 ```
 
@@ -146,11 +152,12 @@ penguins %>%
 
 ```{r df6-hint-2}
 # La soluzione è
-penguins %>% 
-    ggplot(aes(x = species, 
-               y = bill_length_mm)) +
-    geom_boxplot() +
-    geom_jitter(width = .1)
+
+# penguins %>% 
+#     ggplot(aes(x = species, 
+#                y = bill_length_mm)) +
+#     geom_boxplot() +
+#     geom_jitter(width = .1)
 
 ```
 
@@ -173,11 +180,12 @@ penguins %>%
 
 ```{r df7-hint-2}
 # La soluzione è
-penguins %>% 
-    ggplot(aes(x = species, 
-               y = bill_length_mm)) +
-    geom_jitter(aes(shape = island), width = .1) +
-    geom_boxplot(aes(color = species), alpha = 0)
+
+# penguins %>% 
+#     ggplot(aes(x = species, 
+#                y = bill_length_mm)) +
+#     geom_jitter(aes(shape = island), width = .1) +
+#     geom_boxplot(aes(color = species), alpha = 0)
 
 ```
 
@@ -190,11 +198,11 @@ penguins %>%
 # Come prima cosa dobbiamo contare quante specie sono state campionate nei diversi anni.
 # Poi creare un plot che mostri l'andamento nel tempo. Usa una linea per ogni specie di pinguino.
 
-penguins %>%
-    count(___, ___) %>%
-    ggplot(aes(x = ___,
-               y = ___)) +
-    geom_line(aes(color = ___))
+# penguins %>%
+#     count(___, ___) %>%
+#     ggplot(aes(x = ___,
+#                y = ___)) +
+#     geom_line(aes(color = ___))
 
 ```
 
@@ -204,11 +212,12 @@ penguins %>%
 
 ```{r df8-hint-2}
 # La soluzione è
-penguins %>% 
-    count(year, species) %>%
-    ggplot(aes(x = year, 
-               y = n)) +
-    geom_line(aes(color = species))
+
+# penguins %>% 
+#     count(year, species) %>%
+#     ggplot(aes(x = year, 
+#                y = n)) +
+#     geom_line(aes(color = species))
 
 ```
 
@@ -223,12 +232,13 @@ penguins %>%
 
 ```{r df9-hint-2}
 # La soluzione è
-penguins %>% 
-    count(year, species) %>%
-    ggplot(aes(x = year, 
-               y = n)) +
-    geom_line(aes(color = species)) +
-    geom_point()
+
+# penguins %>% 
+#     count(year, species) %>%
+#     ggplot(aes(x = year, 
+#                y = n)) +
+#     geom_line(aes(color = species)) +
+#     geom_point()
 
 ```
 
@@ -244,21 +254,23 @@ penguins %>%
 
 ```{r df10-hint-2}
 # La soluzione 1 è
-penguins %>% 
-    count(year, species) %>%
-    ggplot(aes(x = year, 
-               y = n)) +
-    geom_line(aes(color = species)) +
-    geom_point(aes(color = species))
+
+# penguins %>% 
+#     count(year, species) %>%
+#     ggplot(aes(x = year, 
+#                y = n)) +
+#     geom_line(aes(color = species)) +
+#     geom_point(aes(color = species))
 
 # La soluzione 2 è
-penguins %>% 
-    count(year, species) %>%
-    ggplot(aes(x = year, 
-               y = n, 
-               color = species)) +
-    geom_line() +
-    geom_point()
+
+# penguins %>% 
+#     count(year, species) %>%
+#     ggplot(aes(x = year, 
+#                y = n, 
+#                color = species)) +
+#     geom_line() +
+#     geom_point()
 
 
 ```
@@ -289,13 +301,14 @@ penguins %>%
 
 ```{r df11-hint-3}
 # La soluzione è
-penguins %>% 
-    count(year, species, island) %>%
-    ggplot(aes(x = year, 
-               y = n, color = species)) +
-    geom_line() +
-    geom_point() +
-    facet_wrap(vars(island))
+
+# penguins %>% 
+#     count(year, species, island) %>%
+#     ggplot(aes(x = year, 
+#                y = n, color = species)) +
+#     geom_line() +
+#     geom_point() +
+#     facet_wrap(vars(island))
 
 ```
 
@@ -313,21 +326,21 @@ penguins %>%
 # 7. Disegniamo le linee orizzontali che permettono una maggiore leggibilità
 
 
-penguins %>% 
-    count(____, ___, ___) %>%
-    mutate(year = factor(___))%>%
-    ggplot(aes(x = ___, 
-               y = ___, 
-               group = ___) +
-    geom_line(aes(___ = ___)) +
-    geom_point() +
-    facet_wrap(vars(___)) +
-    theme_classic() +
-    labs(___ = "___",
-         ___ = "___",
-         ___ = "___") +
-    theme(___ = element_text(___ = 20, ___ = ___),
-          ___ = element_line(___ = .5))
+# penguins %>% 
+#     count(____, ___, ___) %>%
+#     mutate(year = factor(___))%>%
+#     ggplot(aes(x = ___, 
+#                y = ___, 
+#                group = ___) +
+#     geom_line(aes(___ = ___)) +
+#     geom_point() +
+#     facet_wrap(vars(___)) +
+#     theme_classic() +
+#     labs(___ = "___",
+#          ___ = "___",
+#          ___ = "___") +
+#     theme(___ = element_text(___ = 20, ___ = ___),
+#           ___ = element_line(___ = .5))
 ```
 
 ```{r df12-hint-1}
@@ -348,21 +361,22 @@ penguins %>%
 
 ```{r df12-hint-3}
 # La soluzione è
-penguins %>% 
-    count(year, species, island) %>%
-    mutate(year = factor(year))%>%
-    ggplot(aes(x = year, 
-               y = n, 
-               group = species)) +
-    geom_line(aes(color = species)) +
-    geom_point() +
-    facet_wrap(vars(island)) +
-    theme_classic() +
-    labs(title = "Andamento annuale dei campionamenti",
-         x = "Anni",
-         y = "Numero di specie campionate") +
-    theme(plot.title = element_text(size = 20, hjust = .5),
-          panel.grid.major.y = element_line(size = .5))
+
+# penguins %>% 
+#     count(year, species, island) %>%
+#     mutate(year = factor(year))%>%
+#     ggplot(aes(x = year, 
+#                y = n, 
+#                group = species)) +
+#     geom_line(aes(color = species)) +
+#     geom_point() +
+#     facet_wrap(vars(island)) +
+#     theme_classic() +
+#     labs(title = "Andamento annuale dei campionamenti",
+#          x = "Anni",
+#          y = "Numero di specie campionate") +
+#     theme(plot.title = element_text(size = 20, hjust = .5),
+#           panel.grid.major.y = element_line(size = .5))
 
 ```
 
@@ -373,12 +387,12 @@ In questo capitolo bonus vi mostrerò la funzionalità delle variabili categoric
 ```{r df13, exercise=TRUE, exercise.setup = "df1-setup" }
 # Immaginiamo di voler plottare un grafico che contenga il numero medio della lunghezza del becco dei pinguini
 
-penguins %>%
-    group_by(species) %>%
-    summarise(nm = mean(bill_length_mm, na.rm = TRUE)) %>%
-    ggplot(aes(x = species,
-               y = nm)) +
-    geom_col()       
+# penguins %>%
+#     group_by(species) %>%
+#     summarise(nm = mean(bill_length_mm, na.rm = TRUE)) %>%
+#     ggplot(aes(x = species,
+#                y = nm)) +
+#     geom_col()       
 
 ```
 
@@ -390,24 +404,24 @@ Proviamo ad utilizzare la funzione arrange() che serve per ordinare.
 ```{r df14, exercise=TRUE, exercise.setup = "df1-setup" }
 # Immaginiamo di voler plottare un grafico che contenga il numero medio della lunghezza del becco dei pinguini
 
-penguins %>%
-    group_by(species) %>%
-    summarise(nm = mean(bill_length_mm, na.rm = TRUE))
+# penguins %>%
+#     group_by(species) %>%
+#     summarise(nm = mean(bill_length_mm, na.rm = TRUE))
 
-penguins %>%
-    group_by(species) %>%
-    summarise(nm = mean(bill_length_mm, na.rm = TRUE)) %>%
-    # Ordino la colonna nm in ordine decrescente (desc())
-    arrange(desc(nm))
+# penguins %>%
+#     group_by(species) %>%
+#     summarise(nm = mean(bill_length_mm, na.rm = TRUE)) %>%
+#     # Ordino la colonna nm in ordine decrescente (desc())
+#     arrange(desc(nm))
 
-penguins %>%
-    group_by(species) %>%
-    summarise(nm = mean(bill_length_mm, na.rm = TRUE)) %>%
-    # Ordino la colonna nm in ordine decrescente (desc())
-    arrange(desc(nm)) %>%
-    ggplot(aes(x = species,
-               y = nm)) +
-    geom_col()       
+# penguins %>%
+#     group_by(species) %>%
+#     summarise(nm = mean(bill_length_mm, na.rm = TRUE)) %>%
+#     # Ordino la colonna nm in ordine decrescente (desc())
+#     arrange(desc(nm)) %>%
+#     ggplot(aes(x = species,
+#                y = nm)) +
+#     geom_col()       
 
 ```
 
@@ -416,10 +430,12 @@ perchè l'ordine delle specie è determinato dalla classe di quella colonna.
 
 ```{r df15, exercise=TRUE, exercise.setup = "df1-setup" }
 # Vediamo la classe della colonna species
-class(penguins$species)
+
+# class(penguins$species)
 
 # Vediamo cosa contiene quella colonna
-penguins$species
+
+# penguins$species
 ```
 
 Vedi l'ultima riga dell'output? Inzia con Levels:
@@ -431,14 +447,14 @@ Come possiamo cambiare quell'ordine? Possiamo usare il pacchetto forcats.
 ```{r df16, exercise=TRUE, exercise.setup = "df1-setup" }
 # Il pacchetto forcats è caricato insieme agli altri pacchetti del tidyverse
 
-penguins %>%
-    group_by(species) %>%
-    summarise(nm = mean(bill_length_mm, na.rm = TRUE)) %>%
-    # Riordino la colonna species sui valori della colonna nm usando la funzione fct_reorder()
-    mutate(species = fct_reorder(species, desc(nm))) %>%
-    ggplot(aes(x = species,
-               y = nm)) +
-    geom_col()       
+# penguins %>%
+#     group_by(species) %>%
+#     summarise(nm = mean(bill_length_mm, na.rm = TRUE)) %>%
+#     # Riordino la colonna species sui valori della colonna nm usando la funzione fct_reorder()
+#     mutate(species = fct_reorder(species, desc(nm))) %>%
+#     ggplot(aes(x = species,
+#                y = nm)) +
+#     geom_col()       
 
 ```
 
